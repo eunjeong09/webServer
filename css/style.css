@@ -1,7 +1,48 @@
 .wrap{
-    width: 100%;
+    /* width: 100%; */
+    width: 900px;
     height: 100%;
     background-color: #f4f4f4;
     padding: 1rem 2rem;
+    margin: 0 auto;
+}
+.oneSection{
+    margin-top: 3rem;
+}
+.mainTitle{
+    height:10rem;
+}
+.bottomArea{
+    width: 100%;
+}
+.leftArea{
+    width: 30%;
+    display: inline-block;
+}
+.rightArea{
+    width: 70%;
+    display: inline-block;
+    float: right;
+}
+
+/* test */
+.imgArea{
+    width: 25rem;
+    height: 20rem;
+    background: #333;
+}
+
+.sectionLine{
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.sectionLine::after{
+    position: absolute;
+    width: 350px;
+    height: 2px;
+    background-color: #333;
+    right: 3rem;
+    top: 1.5rem;
 }
 
