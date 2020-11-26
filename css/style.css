@@ -1,3 +1,6 @@
+.color1{
+    color: #39359e;
+}
 .wrap{
     /* width: 100%; */
     width: 900px;
@@ -16,15 +19,25 @@
     width: 100%;
 }
 .leftArea{
-    width: 30%;
+    width: 40%;
     display: inline-block;
+    float: left;
 }
 .rightArea{
-    width: 70%;
+    width: 60%;
     display: inline-block;
-    float: right;
+    /* float: right; */
 }
-
+.topLine{
+    border-top: 2px solid #898989;
+    display: inline-block;
+    float: left;
+    padding-top: 2rem;
+    margin: 0 1rem;
+}
+.smallTitle{
+    display: block;
+}
 /* test */
 .imgArea{
     width: 25rem;
@@ -44,5 +57,14 @@
     background-color: #333;
     right: 3rem;
     top: 1.5rem;
+    content: '';
+
+}
+
+.row{
+    width: 100%;
+}
+.row > div{
+    width: 33.3%;
 }
 
