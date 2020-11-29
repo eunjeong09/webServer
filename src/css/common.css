@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* reset.css(plan-i standard) */
+html{font-size:20px;box-sizing:border-box;overflow-x:hidden;margin:0;padding:0;}
+*,*:before,*:after{box-sizing:inherit;}
+
+body{margin:0;padding:0;overflow-x:hidden;font-size:.8rem;font-weight:400;font-family:'Nanum Square', 'Noto Sans KR',"Apple SD Gothic Neo","맑은 고딕","Malgun Gothic","돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif;line-height:1.25;color:#333;word-break:keep-all;}
+ul,ol,li,dl,dt,dd{margin:0;padding:0;list-style:none;}
+p,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+a{color:inherit;text-decoration:none;}
+img{border:0;   vertical-align:middle;font-size:0;}
+table{border-collapse:collapse;width:100%;}
+caption,legend{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+select, input, textarea{color:#454545;font-size:.8rem;}
+select, input{vertical-align:middle;}
+address,em,i{font-style:normal;}
+button{border:0;background:none;cursor:pointer;}
+hr{margin:0;border:none;padding:0;display:block;}
+form, figure, figcaption{padding:0;margin:0;}
+fieldset{border:none;padding:0;margin:0;}
+input[type="submit"]{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+header, footer, article, section, aside, nav, main{display:block;}
+button,input,optgroup,select,textarea{font-family:inherit;font-size:inherit;font-weight:inherit;margin:0;}
+::selection{background:rgba(254, 110, 178, .35);}

@@ -1,0 +1,80 @@
+.color1{
+    color: #39359e;
+}
+.wrap{
+    width: 100vw;
+    /* width: 900px; */
+    /* height: 100vh; */
+    /* background-color: pink; */
+    padding: 1rem 2rem;
+}
+.container{
+    width: 900px;
+    margin: 0 auto;
+}
+.oneSection{
+    margin-top: 3rem;
+}
+.section{
+    margin-top: 3rem;
+    display: block;
+}
+.mainTitle{
+    height:10rem;
+}
+.bottomArea{
+    width: 100%;
+}
+.leftArea{
+    width: 40%;
+    display: inline-block;
+    float: left;
+}
+.rightArea{
+    width: 60%;
+    display: inline-block;
+    /* float: right; */
+}
+.topLine{
+    border-top: 2px solid #898989;
+    display: inline-block;
+    float: left;
+    padding-top: 2rem;
+    margin: 0 1rem;
+}
+.smallTitle{
+    display: block;
+}
+/* test */
+.imgArea{
+    height: 20rem;
+    background: #333;
+}
+
+.sectionLine{
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    float: left;
+    margin: 3rem 0;
+}
+.sectionLine::after{
+    position: absolute;
+    width: 350px;
+    height: 2px;
+    background-color: #333;
+    right: 3rem;
+    top: 1.5rem;
+    content: '';
+}
+
+.row{
+    width: 100%;
+}
+.row > div{
+    width: 28.3%;
+}
+
+
