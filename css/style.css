@@ -1,6 +1,9 @@
 .color1{
     color: #39359e;
 }
+.color2{
+    color:#a3a3a3;
+}
 .wrap{
     width: 100vw;
     /* width: 900px; */
@@ -41,6 +44,8 @@
     float: left;
     padding-top: 2rem;
     margin: 0 1rem;
+    /* position: absolute; */
+
 }
 .smallTitle{
     display: block;
@@ -76,5 +81,33 @@
 .row > div{
     width: 28.3%;
 }
+.skillWrap{
+    margin-bottom: 2rem;
+}
+.skillWrap img{
+    width: 200px;
+    height: 200px;
+}
+.workWrap{
+    width: 100%;
 
-
+}
+.workWrap .leftArea{
+    background-color: #404040;
+    color: #efefef;
+    height: 500px;
+    padding: 2rem 1rem;
+}
+.workWrap .workTitle{
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.workWrap .rightArea{
+    height: 500px;
+}
+.footer{
+    width: 100%;
+    border-top: 2px solid #333;
+    margin-top: 2rem;
+    padding: 1rem;
+}
