@@ -22,3 +22,6 @@ input[type="submit"]{-webkit-appearance:none;-moz-appearance:none;appearance:non
 header, footer, article, section, aside, nav, main{display:block;}
 button,input,optgroup,select,textarea{font-family:inherit;font-size:inherit;font-weight:inherit;margin:0;}
 ::selection{background:rgba(254, 110, 178, .35);}
+
+.hide{display: none;}
+.show{display: block;}
