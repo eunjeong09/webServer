@@ -118,3 +118,19 @@
     margin-top: 2rem;
     padding: 1rem;
 }
+
+/* modal */
+#addModalWrap{
+    position: relative;
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+}
+.addModal{
+    height: 400px;
+    width: 600px;
+    background-color: #fff;
+    border: 2px solid #333;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
