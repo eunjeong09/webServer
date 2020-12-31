@@ -1,11 +1,10 @@
 //javascript
-console.log("check");
+console.log("check!!");
 
 //login
 
 //add skill
 document.getElementById("addSkill").onclick = function () {
-  console.log("에드스킬");
   // var modal = document.getElementsByClassName('addModal');
 
   const modalWrap = document.getElementById("addModalWrap");
@@ -14,6 +13,47 @@ document.getElementById("addSkill").onclick = function () {
 
   document.getElementsByClassName("modalTitle")[0].innerHTML="Add Skill";
 };
+
+//closeModal
+document.querySelector('.modalBottom button').onclick = function(){
+  const modalWrap = document.getElementById("addModalWrap");
+  removeClass(modalWrap, "show");
+  addClass(modalWrap, "hide");
+};
+
+document.getElementById("addFile").onchange = function(){
+  readURL(this);
+  
+}
+
+function readURL(input){
+  console.log(input);
+  
+  // if (input.files && input.files[0]) {
+  //   var reader = new FileReader();
+    
+  //   reader.onload = function (e) {
+  //    $('#image_section').attr('src', e.target.result);  
+  //   }
+    
+  //   reader.readAsDataURL(input.files[0]);
+  //   }
+  
+  console.log(input.files);
+  console.log(input.files[0]);
+
+  if (input.files && input.files[0]) {
+      let reader = new FileReader();
+
+      reader.onload = function(e){
+        let uploadImageArea = document.getElementById('uploadImage');
+        uploadImageArea.setAttribute('src',e.target.result);
+      }
+
+      reader.readAsDataURL(input.files[0]);
+  }
+
+}
 
 //파일 업로드
 document.getElementById("upload").onclick = function () {

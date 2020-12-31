@@ -134,3 +134,23 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.modalBottom{
+    position: absolute;
+    bottom: 0;
+    padding: 0.7rem;
+    border-top: 1px solid black;
+    width: 100%;
+}
+.modalBottom button{
+    border: 1px solid #16105e;
+    background: #16105e;
+    border-radius: 5px;
+    color: #efefef;
+    padding: 3px 15px;
+    font-size: 1rem;
+    float: right;
+}
+#uploadImage{
+    width: 200px;
+    height: auto;
+}
