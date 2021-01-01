@@ -134,6 +134,24 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.modalTitle{
+    font-size: 1.5rem;
+    border-bottom: 1px solid #333;
+    padding: 8px;
+}
+.modalBody{
+    padding: 1rem;
+    position: relative;
+}
+.modalBody .leftArea{
+    width: 50%;
+}
+.modalBody .rightArea{
+    width: 50%;
+}
+#upload{
+    margin-top: 2rem;
+}
 .modalBottom{
     position: absolute;
     bottom: 0;
