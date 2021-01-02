@@ -1,7 +1,23 @@
 //javascript
 console.log("check!!");
 
-//login
+//loginModal
+document.getElementById("login").onclick = function(){
+  const loginModal = document.getElementById('loginModal');
+
+  removeClass(loginModal, "hide");
+  addClass(loginModal, "show");
+}
+
+//loginButton
+document.getElementById("loginButton").onclick = function(){
+  let nameValue = document.getElementById('nameValue').value;
+  console.log("nameValue : "+nameValue);
+  let passValue = document.getElementById("passValue").value;
+
+  
+
+}
 
 //add skill
 document.getElementById("addSkill").onclick = function () {
