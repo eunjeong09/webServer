@@ -2,22 +2,35 @@
 console.log("check!!");
 
 //loginModal
-document.getElementById("login").onclick = function(){
-  const loginModal = document.getElementById('loginModal');
+document.getElementById("login").onclick = function () {
+  const loginModal = document.getElementById("loginModal");
 
   removeClass(loginModal, "hide");
   addClass(loginModal, "show");
-}
+};
 
 //loginButton
-document.getElementById("loginButton").onclick = function(){
-  let nameValue = document.getElementById('nameValue').value;
-  console.log("nameValue : "+nameValue);
+document.getElementById("loginButton").onclick = function () {
+  let nameValue = document.getElementById("nameValue").value;
+  console.log("nameValue : " + nameValue);
   let passValue = document.getElementById("passValue").value;
 
-  
+  let data = new Object();
+  data.name = nameValue;
+  data.pass = passValue;
+  console.log(data);
 
-}
+  let xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status == 200) {
+      console.log(this.responseText);
+    }
+  };
+  xhr.open("POST", "../php/login.php", true);
+  xhr.setRequestHeader('Content-type', 'application/json')
+  xhr.send(data);
+};
 
 //add skill
 document.getElementById("addSkill").onclick = function () {
@@ -27,48 +40,46 @@ document.getElementById("addSkill").onclick = function () {
   removeClass(modalWrap, "hide");
   addClass(modalWrap, "show");
 
-  document.getElementsByClassName("modalTitle")[0].innerHTML="Add Skill";
+  document.getElementsByClassName("modalTitle")[0].innerHTML = "Add Skill";
 };
 
 //closeModal
-document.querySelector('.modalBottom button').onclick = function(){
+document.querySelector(".modalBottom button").onclick = function () {
   const modalWrap = document.getElementById("addModalWrap");
   removeClass(modalWrap, "show");
   addClass(modalWrap, "hide");
 };
 
-document.getElementById("addFile").onchange = function(){
+document.getElementById("addFile").onchange = function () {
   readURL(this);
-  
-}
+};
 
-function readURL(input){
+function readURL(input) {
   console.log(input);
-  
+
   // if (input.files && input.files[0]) {
   //   var reader = new FileReader();
-    
+
   //   reader.onload = function (e) {
-  //    $('#image_section').attr('src', e.target.result);  
+  //    $('#image_section').attr('src', e.target.result);
   //   }
-    
+
   //   reader.readAsDataURL(input.files[0]);
   //   }
-  
+
   console.log(input.files);
   console.log(input.files[0]);
 
   if (input.files && input.files[0]) {
-      let reader = new FileReader();
+    let reader = new FileReader();
 
-      reader.onload = function(e){
-        let uploadImageArea = document.getElementById('uploadImage');
-        uploadImageArea.setAttribute('src',e.target.result);
-      }
+    reader.onload = function (e) {
+      let uploadImageArea = document.getElementById("uploadImage");
+      uploadImageArea.setAttribute("src", e.target.result);
+    };
 
-      reader.readAsDataURL(input.files[0]);
+    reader.readAsDataURL(input.files[0]);
   }
-
 }
 
 //파일 업로드
