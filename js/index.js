@@ -12,22 +12,24 @@ document.getElementById("login").onclick = function () {
 //loginButton
 document.getElementById("loginButton").onclick = function () {
   let nameValue = document.getElementById("nameValue").value;
-  console.log("nameValue : " + nameValue);
   let passValue = document.getElementById("passValue").value;
 
   let data = new Object();
   data.name = nameValue;
   data.pass = passValue;
-  console.log(data);
+  // console.log(data);
 
   let xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status == 200) {
-      console.log(this.responseText);
+      // console.log(this.responseText);
+      if(this.responseText > 0){
+        alert("login success!");
+      }
     }
   };
-  xhr.open("POST", "../php/login.php", true);
+  xhr.open("POST", "./php/login.php", true);
   xhr.setRequestHeader('Content-type', 'application/json')
   xhr.send(data);
 };
