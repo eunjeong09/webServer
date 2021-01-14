@@ -1,6 +1,3 @@
-//javascript
-console.log("check!!");
-
 //loginModal
 document.getElementById("login").onclick = function () {
   const loginModal = document.getElementById("loginModal");
@@ -57,21 +54,6 @@ document.getElementById("addFile").onchange = function () {
 };
 
 function readURL(input) {
-  console.log(input);
-
-  // if (input.files && input.files[0]) {
-  //   var reader = new FileReader();
-
-  //   reader.onload = function (e) {
-  //    $('#image_section').attr('src', e.target.result);
-  //   }
-
-  //   reader.readAsDataURL(input.files[0]);
-  //   }
-
-  console.log(input.files);
-  console.log(input.files[0]);
-
   if (input.files && input.files[0]) {
     let reader = new FileReader();
 
@@ -86,21 +68,21 @@ function readURL(input) {
 
 //파일 업로드
 document.getElementById("upload").onclick = function () {
+
+  var fileInput = document.getElementById("addFile");
+  var file = fileInput.files[0];
+  var formData = new FormData();
+  formData.append("uploadFile" , file);
+
   var xhr = new XMLHttpRequest();
+  xhr.open("POST" , "./php/upload.php" , true);
+  xhr.send(formData);
 
-  xhr.open("POST", "./php/upload.php", true);
-  xhr.setRequestHeader("Content-type", "image");
-
-  var file = document.getElementById("addFile").files[0];
-  if (file) {
-    var formdata = new FormData();
-    formdata.append("addFile", file);
-    xhr.send(formdata);
-  }
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      console.log("file업로드 성공?");
-      //some code
+      //file upload success
+
+      //append?
     }
   };
 };
